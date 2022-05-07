@@ -1,0 +1,40 @@
+GET http://127.0.0.1:8000/get/
+
+
+###
+
+
+GET http://127.0.0.1:8000/views/1/
+
+
+###
+
+
+POST http://127.0.0.1:8000/post/
+Content-Type: application/json
+
+
+{
+    "value": 35.0,
+    "project": 3
+}
+
+###
+
+PATCH  http://127.0.0.1:8000/patch/2/
+Content-Type: application/json
+
+
+{
+    "value": 20.0,
+}
+
+
+PUT http://127.0.0.1:8000/put/4/
+Content-Type: application/json
+
+{        
+    "value": 25.0,
+    "project": 1,
+    "id": 4
+}
