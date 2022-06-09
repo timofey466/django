@@ -8,8 +8,8 @@ from last_app.serializers import ProductSerializer, StockSerializer
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['products']
+    filter_backends = [SearchFilter]
+    filterset_fields = ['title', 'description']
 
 
 class StockViewSet(ModelViewSet):
