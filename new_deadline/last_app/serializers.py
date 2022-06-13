@@ -20,7 +20,7 @@ class StockSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Stock
-        fields = ['id', 'address', 'positions', 'product']
+        fields = ['id', 'address', 'positions', 'products']
 
     def create(self, validated_data):
         positions = validated_data.pop('positions')
@@ -40,7 +40,7 @@ class StockSerializer(serializers.ModelSerializer):
         for letters in positions:
             StockProduct.objects.update_or_create(
                 stock=stock,
-                products=letters['product'],
+                product=letters['product'],
                 defaults={
                     'quantity': letters['quantity'],
                     'price': letters['price']}
