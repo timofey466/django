@@ -10,6 +10,8 @@ class AdvertisementViewSet(ModelViewSet):
     """ViewSet для объявлений."""
     queryset = Advertisement.objects.all()
     serializer_class = AdvertisementSerializer
+    filterset_class = 
+
 
     def get_permissions(self):
         """Получение прав для действий."""
